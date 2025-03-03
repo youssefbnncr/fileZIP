@@ -1,20 +1,26 @@
 <html>
   <head>
     <title>Login</title>
+    <link href="output.css" rel="stylesheet">
   </html>
   <body>
-    <form class="" action="/login" method="post">
-      <div class="col-md-6">
-        <label for="email1" class="">Email</label>
-        <input type="email" class="" id="email1">
-      </div>
-      <div class="col-md-6">
-        <label for="password1">Password</label>
-        <input type="password" class="" id="password1">
-      </div>
-      <div class="col-12">
-        <button type="submit" class="">Login</button>
-      </div>
-    </form>
+    <div class="">
+      <form class="" action="/login" method="post">
+        <div class="">
+          <label for="email1" class="">Email</label>
+          <input type="email" class="" id="email1" placeholder="email">
+        </div>
+        <div class="">
+          <label for="password1">Password</label>
+          <input type="password" class="" id="password1" placeholder="password">
+        </div>
+        <div class="">
+          <button type="submit" class="">Login</button>
+        </div>
+        <div>
+          <p>if you don't have account please <a href="/signup" class="bottom">signup</a></p>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
