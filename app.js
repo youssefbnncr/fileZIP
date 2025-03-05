@@ -1,6 +1,5 @@
 const express = require('express');
 const session = require('express-session');
-const passport = require("./config/passportConfig");
 require("dotenv").config();
 const path = require('path');
 
@@ -11,7 +10,7 @@ require('dotenv').config();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-const assetsPath = path.join(__dirname, "public");
+const assetsPath = path.join(__dirname, "src");
 app.use(express.static(assetsPath));
 
 app.use(express.urlencoded({ extended: true }));
