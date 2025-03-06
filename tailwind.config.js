@@ -1,13 +1,28 @@
 module.exports = {
-  content: ["./views/**/*.{ejs,html}", "./public/**/*.{html,js}", "./*.{html,js}"],
+  content: [
+    "./views/**/*.ejs", // Include EJS files
+    "./src/**/*.{html,js}", // Include HTML & JS files inside /src
+    "./public/**/*.html", // Include HTML files in /public
+  ],
   theme: {
     extend: {
       colors: {
-        primary: "#4CAF50", // Green
-        dark: "#212121", // Almost Black
-        light: "#F5F5F5", // Off White
-        accent: "#2196F3", // Bright Blue
-        warning: "#FF5722", // Orange-Red
+        primary: {
+          blue: "#005AA7",
+          green: "#4CAF50",
+        },
+        secondary: {
+          lightBlue: "#009FFD",
+          darkGreen: "#2E7D32",
+        },
+        neutral: {
+          lightGray: "#F5F5F5",
+          darkGray: "#333333",
+        },
+        accent: {
+          yellow: "#FDCB58",
+          red: "#E63946",
+        },
       },
     },
   },
