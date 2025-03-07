@@ -1,8 +1,7 @@
 <html>
   <head>
-    <title>Home</title>
+    <title>FileZIP</title>
     <link href="output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <!-- nav bar -->
@@ -11,7 +10,7 @@
     <%- include('partials/sidebar') %>
     <!-- main page -->
     <div class="flex-grow h-full">
-    </div>
+      <%- include(`pages/${path}`) %>
     </div>
   </body>
 </html>
