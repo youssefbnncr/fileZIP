@@ -7,7 +7,7 @@
     <!-- nav bar -->
     <%- include('partials/nav') %>
     <!-- sidebar -->
-    <%- include('partials/sidebar') %>
+    <%- include('partials/sidebar',{path:path}) %>
     <!-- main page -->
     <div class="flex-grow h-full">
       <%- include(`pages/${path}`) %>
