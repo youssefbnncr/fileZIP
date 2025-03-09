@@ -2,25 +2,52 @@
   <head>
     <title>Login</title>
     <link href="output.css" rel="stylesheet">
-  </html>
-  <body>
-    <div class="">
-      <form class="" action="/login" method="post">
-        <div class="">
-          <label for="email1" class="">Email</label>
-          <input type="email" class="" id="email1" placeholder="email">
+  </head>
+  <body class="bg-gray-900 text-white">
+    <section class="bg-gray-900">
+      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="w-full bg-gray-800 rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 border border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl">
+                Login to your account
+            </h1>
+            <form class="space-y-4 md:space-y-6" action="/login" method="post" id="loginForm">
+              <!-- Email -->
+              <div>
+                  <label for="email" class="block mb-2 text-sm font-medium">Your email</label>
+                  <input type="email" name="email" id="email" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@email.com" required>
+              </div>
+
+              <!-- Password -->
+              <div>
+                  <label for="password" class="block mb-2 text-sm font-medium">Password</label>
+                  <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" minlength="8" maxlength="20" required>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="w-full text-white bg-primary-600 hover:bg-gray-700 focus:ring-2 focus:outline-none border-4 border-amber-50 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
+
+              <!-- Signup Link -->
+              <p class="text-sm font-light text-gray-400">
+                  Don't have an account? <a href="/signup" class="font-medium text-primary-500 hover:underline">Create one here</a>
+              </p>
+            </form>
+          </div>
         </div>
-        <div class="">
-          <label for="password1">Password</label>
-          <input type="password" class="" id="password1" placeholder="password">
-        </div>
-        <div class="">
-          <button type="submit" class="">Login</button>
-        </div>
-        <div>
-          <p>if you don't have account please <a href="/signup" class="bottom">signup</a></p>
-        </div>
-      </form>
-    </div>
+      </div>
+    </section>
+
+    <script>
+      const password = document.getElementById("password");
+
+      const loginForm = document.getElementById("loginForm");
+
+      loginForm.addEventListener('submit', (e) => {
+        if (password.value === "") {
+          e.preventDefault();
+          alert("Please enter a password.");
+        }
+      });
+    </script>
   </body>
 </html>

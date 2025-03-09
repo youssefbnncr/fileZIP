@@ -7,6 +7,14 @@ router.get('/', (req, res) => {
   res.render('home', { path: "cloud"});
 });
 
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
 router.get('/:path', (req, res) => {
   const { path } = req.params;
   if (validPaths.includes(path)) {
