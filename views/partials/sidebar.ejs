@@ -10,7 +10,7 @@
     const path = '<%= path %>'
     const items = document.getElementById("items");
     const listItems = items.querySelectorAll("li");
-    console.log(path)
+    console.log(listItems[0])
     switch(path){
       case "cloud":
         listItems[0].classList.add('bg-gray-950', 'border-l-4', 'border-blue-800', 'font-semibold');
