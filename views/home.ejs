@@ -6,10 +6,10 @@
   <body>
     <!-- nav bar -->
     <%- include('partials/nav') %>
-    <!-- sidebar -->
-    <%- include('partials/sidebar',{path:path}) %>
-    <!-- main page -->
-    <div class="flex-grow h-full">
+    <div class="flex h-[calc(100vh-5rem)]">
+      <!-- sidebar -->
+      <%- include('partials/sidebar',{path:path}) %>
+      <!-- main page -->
       <%- include(`pages/${path}`) %>
     </div>
   </body>
