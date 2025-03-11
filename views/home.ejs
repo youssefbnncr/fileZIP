@@ -10,7 +10,9 @@
       <!-- sidebar -->
       <%- include('partials/sidebar',{path:path}) %>
       <!-- main page -->
-      <%- include(`pages/${path}`) %>
+      <div class="w-full">
+       <%- include(`pages/${path}`) %>
+      </div>
     </div>
   </body>
 </html>
